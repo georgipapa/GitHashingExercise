@@ -1,0 +1,15 @@
+read -p "Enter a 4-digit integer: " unique_integer
+
+function is_valid_integer() {
+    [[ $1 =~ ^[0-9]{4}$ ]]
+}
+while true; do
+    read -p "Enter a 4-digit integer: " unique_integer
+    if is_valid_integer "$unique_integer"; then
+        break
+    else
+        echo "Invalid input. Please enter a valid 4-digit integer."
+    fi
+done
+
+echo -n $unique_integer | sha256sum > hash_output.txt
