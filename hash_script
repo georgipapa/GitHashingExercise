@@ -13,7 +13,7 @@ done
 echo -n $unique_integer | sha256sum >> hash_output.txt
 
 git add hash_script hash_output.txt
-git commit -m "first commit: Add hash_script and hash_output.txt"
+git commit -m "commit: Add hash_script and hash_output.txt"
 git branch -M main
 git remote add quiz-4 git@github.com:georgipapa/GitHashingExercise.git
 git push --set-upstream quiz-4 main
